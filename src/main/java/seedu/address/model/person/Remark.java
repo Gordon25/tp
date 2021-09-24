@@ -17,6 +17,13 @@ public class Remark {public static final String MESSAGE_CONSTRAINTS = "Remarks c
         value = remark;
     }
 
+    /**
+     * Returns true if a given string is a valid phone number.
+     */
+    public static boolean isValidRemark(String test) {
+        return true;
+    }
+
     @Override
     public String toString() {
         return value;
