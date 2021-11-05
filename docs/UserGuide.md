@@ -3,13 +3,12 @@ layout: page
 title: SoConnect User Guide
 ---
 
-SoConnect is a **desktop app for SoC students to manage contacts of Professors and Teaching Assistants, 
-as well as to keep track of noteworthy events, optimized for use via a _Command Line Interface (CLI)_** while still having 
-the benefits of a _Graphical User Interface (GUI)_. If you can type fast, SoConnect can get your contact management tasks
-done faster than traditional _GUI_ apps. 
+Made by you, for you, SoConnect is a **desktop app for _SoC_ students to manage contacts of _Professors_ and _Teaching Assistants_. 
+It is also the goto app for managing noteworthy events, optimized for use via a _Command Line Interface (CLI)_** while still having 
+the benefits of a _Graphical User Interface (GUI)_. If you can type fast, managing your contacts will be a **breeze** with SoConnect.
 
-This User Guide will help you to familiarise yourself with your SoConnect quickly and teach you the 
-full range of features it offers.
+This User Guide aims to help you familiarise yourself with your SoConnect quickly and teach you the 
+full range of features it offers. So start on this journey today, we promise you will not regret!
 
 
 * Table of Contents
@@ -20,8 +19,8 @@ full range of features it offers.
 ## How to use SoConnect User Guide
 
 * You can click on the titles in the Table of Contents to jump the section that you are interested in.
-* You will find these icons in this user guide:
-    * **:bulb: Tip** provides additional information that might be useful to you.
+* You will find these icons useful in helping you read this user guide:
+    * **:bulb: Tip** highlights additional information that might be useful to you.
     * **:information_source: Note** provides supplementary information that helps you to understand this User Guide.
     * **:exclamation: Caution** cautions you against certain actions that will lead to undesirable consequences.
 * You can find explanations of _italicised_ words in the [Glossary](#glossary).
@@ -30,54 +29,59 @@ full range of features it offers.
 
 ### How to read commands in SoConnect
 
-You will see commands throughout this User Guide and each of them have their own _Command Format_.
+You will see _commands_ throughout this User Guide and each of them have their own _Command Format_.
 
 This is one example of a command: 
 
 ![Command Example](images/demo-screenshots/commandSyntax.png)
 
+//provide screenshot here
+ 
 There are only 3 different parts of inputs within each command:
 1. **COMMAND WORD**
 
-    Command word is the word that you need to specify when you need SoConnect to perform some actions for you. 
+    Command word is the word that you need to specify to tell SoConnect to do your bidding. 
     Else, SoConnect does not know how it can help you!
 
-    For example, specifying `cedit` in the command above will tell SoConnect that you want to edit a contact.
+    For example, specifying `cedit` in the command above will tell SoConnect to edit a contact for you.
 
 2. **_PARAMETER_**
 
-    _Parameter_ is the related information that you need to specify to SoConnect for the action you want to do.
+    _Parameter_ is the supplementary information that you need to specify to SoConnect for the action you want to do.
 
     Using the same example, after telling SoConnect to edit a contact, you will need to tell SoConnect which contact to edit
-and provide the information for the edit.
+and what information to edit.
 
-    Specifying `2` tells SoConnect to edit contact at **index 2** and `Betsy Crower` 
+    Specifying `2` tells SoConnect you want to edit contact at **index 2** and `Betsy Crower` 
 is the **new name** you want to change the specified contact to.
 
-3. **PREFIX**
+3. **_PREFIX_**
 
-    You can help SoConnect in separating the type of _parameters_ when you input information.
+    There's so many information for SoConnect to track! You can help SoConnect help you by separating the type of _parameters_ using prefixes.
+    
+    Just how a language has vocabulary, SoConnect has its very own vocabulary known as prefixes.
 
-    Each prefix always ends with one `/`. Jump to [List of Prefixes](#list-of-prefixes) to see all prefixes you can use in SoConnect.
+    Each prefix always ends with one `/`. Seems mind boggling? Jump to [List of Prefixes](#list-of-prefixes) to see all prefixes you can use in SoConnect.
 
-    For example, information that you specified after prefix `n/` would help SoConnect to identify the _parameter_ 
-is referring to **name** of the contact.
+    For example, if you use `n/`, SoConnect will recognise the information following this prefix should be a **name**.
 
 
-Thus, the command above will tell SoConnect to **edit the name of the contact at index 2 to Betsy Crower**.
+Putting it together, you can tell SoConnect to **edit the name of the contact at index 2 to Betsy Crower** by specifying `cedit 2 n/Betsy Crower`.
 
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
 
 * Read more on _Command Format_ below, or
-* See more commands that you can type in SoConnect [here](#Features)! 
+* Ready to learn more feature? click here [here](#Features)! 
 </div>
 
 
 <div markdown="block" class="alert alert-info">
 
 **About the _Command Format_**
+   
+SoConnect boasts a suit of features that will help you manage your contacts and events. 
 
-We will teach you how to perform certain actions on SoConnect for each [feature](#Features) 
+Learn how you can perform certain actions on SoConnect for each [feature](#Features) 
 you can find in SoConnect.
 
 Here are some information that can help you in understanding the formats at the later section!
@@ -94,7 +98,7 @@ Here are some information that can help you in understanding the formats at the 
 * Each pair of prefix and _parameter_ can be in any order.<br>
   e.g. if the command specifies `n/NAME [p/PHONE_NUMBER]`, `[p/PHONE_NUMBER] n/NAME` is also acceptable.
 
-* If a _parameter_ is expected only once in the command, but you specified it multiple times, **only the last occurrence** of the parameter will be taken.<br>
+* If a _parameter_ is expected only once in the command, but you specify it multiple times, SoConnect will take **only the last occurrence** of the parameter.<br>
   e.g. if you specify `p/12341234 p/56785678`, only `p/56785678` will be taken.
 
 * Extraneous _parameters_ for commands that do not take in _parameters_ (such as `help` and `exit`) will be **ignored**.<br>
@@ -107,7 +111,9 @@ Here are some information that can help you in understanding the formats at the 
 
 ### What happens if my command is invalid?
 
-After you specified a command to be done on SoConnect, a success message will be shown on the message box of SoConnect.
+//insert picture of message sucess here 
+
+After you correctly typed a command on SoConnect, a success message will be shown on the message box of SoConnect.
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
 
@@ -115,18 +121,18 @@ Not sure where is the **message box**? Go to [Overview of SoConnect](#overview-o
 sections you can find in SoConnect!
 </div>
 
-For example, after you specified [`clist`](#listing-all-contacts-clist):
+For example, after you specify [`clist`](#listing-all-contacts-clist):
 ![Success Message](images/demo-screenshots/successMessage.png)
-SoConnect will tell you that it has successfully listed all contacts!
+SoConnect will notify you that it has successfully listed all contacts!
 
 <br>
 
-However, when the command you entered does not fulfill the _Command Format_ specified in [Features](#features),
+However, when the command you entered does not follow the _Command Format_ specified in [Features](#features),
 an **error message** will be shown on the message box instead.
 
 For example, after you specified [`cview`](#viewing-a-contact-cview) **without** specifying which contact to view:
 ![Error Message](images/demo-screenshots/invalidCommand.png)
-SoConnect will tell you that the _Command Format_ is invalid!
+SoConnect will warn you that the _Command Format_ is invalid!
 
 --------------------------------------------------------------------------------------------------------------------
 ## Quick start
@@ -1079,11 +1085,17 @@ ________________________________________________________________________________
 
 Word | Explanation
 --------|------------------
+**SoC** | School of Computing, the faculty in NUS that specialises in computor science courses.
+**Professors** | Instructors who conduct lectures and teach modules in NUS.
+**Teaching Assistants** | NUS student teachers employed to conduct small classes known as tutorials.
 **Command Line Interface (CLI)** | Text-based application where user interact with the application by **typing in texts/ commands**
+**command** | a string of words and characters you type to perform an action, each command has its own **Command format**.
 **Command Format** | The structure that a command must abide by for it to be executed 
+**Parameter(s)** | Information supplied by the user to the application when executing certain commands 
+**Prefix** | A tag, consisting of a slash - "/", with one or a few characters to denote information about a certain **field** 
 **Field(s)** | The information type within each contact or event <br> For example, **Name** and **Address** of a contact are _fields_ of a contact.
 **Graphical User Interface (GUI)** | Graphical representation of the application that the user sees
 **Hard Disk** | Device in computer that is used to store files of the computer
 **Home Folder** | Folder which the application file is saved in the computer
 **JavaScript Object Notation (JSON) File** | The file that is used by the application to load its data and to save data of the application in a human-readable format.
-**Parameter(s)** | Information supplied by the user to the application when executing certain commands 
+
