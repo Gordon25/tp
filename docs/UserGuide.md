@@ -3,12 +3,12 @@ layout: page
 title: SoConnect User Guide
 ---
 
-Made by you, for you, SoConnect is a **desktop app for _SoC_ students to manage contacts of _Professors_ and _Teaching Assistants_. 
+Made by _SoC_ students, **for SoC students**, SoConnect is a **desktop app that manages contacts of _Professors_ and _Teaching Assistants_ for you. 
 It is also the goto app for managing noteworthy events, optimized for use via a _Command Line Interface (CLI)_** while still having 
 the benefits of a _Graphical User Interface (GUI)_. If you can type fast, managing your contacts will be a **breeze** with SoConnect.
 
 This User Guide aims to help you familiarise yourself with your SoConnect quickly and teach you the 
-full range of features it offers. So start on this journey today, we promise you will not regret!
+full range of features it offers. So start on this journey today with your new university buddy SoConnect, we promise you will not regret!
 
 
 * Table of Contents
@@ -146,9 +146,12 @@ SoConnect will warn you that the _Command Format_ is invalid!
 
 2. Download the latest `soconnect.jar` from [here](https://github.com/AY2122S1-CS2103T-W15-3/tp/releases).
 
+
+// insert picture here 
+
 3. Copy the file to the folder you want to use as the _home folder_ for your SoConnect.
 
-4. Double-click the file to start SoConnect. This is how SoConnect looks like:<br>
+4. Double-click the file to start SoConnect. If you installed correctly, you should see something similar on your screen:<br>
 
     <div markdown="span" class="alert alert-info">:information_source: **Note:**
 
@@ -158,15 +161,15 @@ SoConnect will warn you that the _Command Format_ is invalid!
     ![Ui](images/Ui.png)
     If SoConnect does not start by double-clicking, you can check this [alternative](#how-to-start-soconnect-using-terminal) to start it too.
 
-5. **Type the command in the command box and press Enter** to execute it. 
+5. **Type a command in the command box and press Enter** to execute it. 
 
     <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
 
-    Not sure where is the **command box**? Go to [Overview of SoConnect](#overview-of-soconnect) to check out the different 
+    Not sure where is the **command box**? Check out [Overview of SoConnect](#overview-of-soconnect) to view the different 
     sections you can find in SoConnect!
     </div>
 
-   e.g. typing `help` and **pressing Enter** will open the [help window](#help-window-help).<br>
+   Feeling lost and overwhelmed? Type `help` and **press Enter**, you will see the [help window](#help-window-help) open.<br>
    Some example commands you can try:
 
    * `elist`: [Lists all events](#listing-all-events-elist).
@@ -186,14 +189,14 @@ _See also: [What happens if my command is invalid](#what-happens-if-my-command-i
 
 ## Overview of SoConnect
 
-This is what you will see when you open SoConnect!
+This is what you should see when you open SoConnect!
 ![Labelled SoConnect](images/demo-screenshots/labelledSoconnectOverview.png)
 
 1. **Menu Bar**
 
     Menu Bar consists if 2 tabs: `File` and `Help`.
     
-    Upon clicking `File`, you can choose to:
+    If you click `File`, you can choose to:
    1. **Exit** SoConnect
    2. Open **Calendar** of SoConnect
 
@@ -214,7 +217,7 @@ This is what you will see when you open SoConnect!
      
 2. **Command Box**
 
-    This is where you can type all your commands to use the [features of SoConnect](#features).
+    This is where you type your commands to use SoConnnect's [features of SoConnect](#features).
 
 3. **Message Box**
 
@@ -240,8 +243,8 @@ This is what you will see when you open SoConnect!
 
 ![Contact Card](images/demo-screenshots/contactCard.png)
 You can always find these 2 information of each contact displayed in SoConnect Contact List:
-1. Contact Index
-2. Contact Name
+1. Contact **Index**
+2. Contact **Name**
 
 Here are the icons you might see under each contact:
 
@@ -256,16 +259,19 @@ Icon | _Field_
 **![Event Icon](images/demo-screenshots/eventIcon.png)** | Linked Events
 **![Tag Icon](images/demo-screenshots/tagIcon.png)** | Tag
 
-*Bookmark icon is only visible when the contact has been bookmarked. 
+<div markdown="span" class="alert alert-info">:information_source: **Note:**
+
+*Bookmark icon is only visible if the contact has been bookmarked. 
 _See also: [Bookmarking a contact](#bookmarking-a-contact-cmark)_
 
+</div>
 
 ### Icons in Events List
 
 ![Event Card](images/demo-screenshots/eventCard.png)
 You can always find these 2 information of each contact displayed in SoConnect Event List:
-1. Event Index
-2. Event Name
+1. Event **Index**
+2. Event **Name**
 
 Here are the icons you might see under each event:
 
@@ -279,8 +285,12 @@ Icon | _Field_
 **![Contact Icon](images/demo-screenshots/contactsIcon.png)** | Linked Contacts
 **![Tag Icon](images/demo-screenshots/tagIcon.png)** | Tag
 
-*Bookmark icon is only visible when the event has been bookmarked.
+<div markdown="span" class="alert alert-info">:information_source: **Note:**
+   
+*Bookmark icon is only visible if the event has been bookmarked.
 _See also: [Bookmarking an event](#bookmarking-an-event-emark)_
+
+</div>
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -291,10 +301,19 @@ There are three main sections to SoConnect Features:
 [Event Management](#event-management) and 
 [General](#general).
 
-For each feature, you are provided with:
+<div markdown="span" class="alert alert-primary">:bulb: **Tip:**
+   
+Just starting off, we recommend you start with the **basic** features first.
+Feeling adventurous, we welcome you to checkout SoConnect's **advanced** features.
+   
+</div>
+
+For each feature, you will find:
 * Function and Description of the feature
 * _Command Format_ of the feature
-* Examples of some usages of the feature (All examples assumes SoConnect has the **inital sample** contacts and events)
+* Examples of how to use the feature 
+
+(All examples assumes SoConnect has the **inital sample** contacts and events)
 
 
 ## Contact Management
@@ -325,19 +344,20 @@ A contact can have any number of tags (including 0)
 
 Input | Expected Output
 ------|------------------
-`cadd n/Alex Doe e/e0123456@u.nus.edu a/COM1 #99-99 th/johnDoe99 t/Professor` | You should see this message in the message box: `New contact added: Alex Doe; Email: e0123456@u.nus.edu; Address: COM1 #99-99; Telegram: johnDoe99; Tags: [Professor]` <br><br> You should also see `Alex Doe` **at the end** of your contact list: ![New Contact 1](images/demo-screenshots/caddEx1.png)
-`cadd n/ Jon Cheng t/TA e/e7654321@u.nus.edu a/COM1-0201 p/87654321 t/Senior th/jonnyjohnny z/https://nus-sg.zoom.us/j/0123456789?pwd=ABCDEFGHIJKLMNOPDJFHISDFSDH` | You should see this message in the message box: `New contact added: Jon Cheng; Email: e7654321@u.nus.edu; Phone: 87654321; Address: COM1-0201; Zoom Link: https://nus-sg.zoom.us/j/0123456789?pwd=ABCDEFGHIJKLMNOPDJFHISDFSDH; Telegram: jonnyjohnny; Tags: [Senior][TA]`<br><br> You should also see `Jon Cheng` **at the end** of your contact list: ![New Contact 2](images/demo-screenshots/caddEx2.png)
+`cadd n/Alex Doe e/e0123456@u.nus.edu a/COM1 #99-99 th/johnDoe99 t/Professor` | You should see this message in the message box: `New contact added: Alex Doe; Email: e0123456@u.nus.edu; Address: COM1 #99-99; Telegram: johnDoe99; Tags: [Professor]` <br><br> You should also see `Alex Doe` **at the end** of your contact list: ![New Contact 1](images/demo-screenshots/caddEx1.png) // change picture
+`cadd n/ Jon Cheng t/TA e/e7654321@u.nus.edu a/COM1-0201 p/87654321 t/Senior th/jonnyjohnny z/https://nus-sg.zoom.us/j/0123456789?pwd=ABCDEFGHIJKLMNOPDJFHISDFSDH` | You should see this message in the message box: `New contact added: Jon Cheng; Email: e7654321@u.nus.edu; Phone: 87654321; Address: COM1-0201; Zoom Link: https://nus-sg.zoom.us/j/0123456789?pwd=ABCDEFGHIJKLMNOPDJFHISDFSDH; Telegram: jonnyjohnny; Tags: [Senior][TA]`<br><br> You should also see `Jon Cheng` **at the end** of your contact list: ![New Contact 2](images/demo-screenshots/caddEx2.png) // change picture
 
-*Index of the newly added contact will depend on your previous number of contacts.
+*Index of the newly added contact will be one more than your previous number of contacts.
 
 
 ### Bookmarking a contact: `cmark`
 
 Bookmarks the specified contact(s).
 
-**Format:** `cmark INDEX`
+**Format:** `cmark INDEX [INDEX]...`
 
-* Bookmarks the contact at `INDEX` and **pins it at the top** of the contact list.
+* Bookmarks the contact(s) at `INDEX` and **pins it at the top** of the contact list.
+* You can provide more than one `INDEX`, the marked contacts will appear in reverse order to the order you specified the indexes.
 * `INDEX` refers to the index number shown in the **currently displayed** contact list.
 
 <div markdown="span" class="alert alert-info">:information_source: **Note:**
@@ -349,11 +369,11 @@ Bookmarks the specified contact(s).
 
 Input | Expected Output
 --------|------------------
-`cmark 2` | Bookmarks the second contact of **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Bookmarked Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]` <br><br> You should see `Bernice Yu` **pinned to the top** of your contact list with the **Bookmark Icon**: ![Mark Contact](images/demo-screenshots/cmarkEx.png) 
+`cmark 2` | Bookmarks the second contact of the **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Marked Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]` <br><br> You should see `Bernice Yu` **pinned to the top** of your contact list with the **Bookmark Icon**: ![Mark Contact](images/demo-screenshots/cmarkEx.png) 
 
+`cmark 4 5` | Bookmarks the fourth and fifth contact of the **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> 
 
 _See also: [Removing bookmark of a contact](#removing-bookmark-of-a-contact-cunmark)_
-
 
 
 ### Clearing all contacts: `cclear`
@@ -373,9 +393,9 @@ Deletes the specified contact(s) from SoConnect.
 
 **Format:** `cdelete INDEX1[-INDEX2]`
 
-* Deletes the contact at:
-  * the specified `INDEX1` or 
-  * between the specified range from `INDEX1` to `INDEX2` inclusively (if you provide `INDEX2`).
+* Deletes the contact(s):
+  * at the specified `INDEX1` or 
+  * from `INDEX1` to `INDEX2` inclusively (if you provide `INDEX2`).
 * `INDEX` refers to the index number shown in the displayed contact list.
 
 <div markdown="span" class="alert alert-info">:information_source: **Note:**
@@ -986,6 +1006,8 @@ For instance, you can link your professor to the lecture.
 
 ### How to start SoConnect using Terminal
 
+Only proceed if the [original](#quick-start) does not work for you.
+
 1. Open the terminal (For [MacOS](https://support.apple.com/en-sg/guide/terminal/welcome/mac) or Linux) 
 or Command Prompt (For [Windows](https://www.howtogeek.com/235101/10-ways-to-open-the-command-prompt-in-windows-10/)).
 
@@ -994,7 +1016,7 @@ See the tutorial for [Windows](https://www.howtogeek.com/659411/how-to-change-di
 [MacOS or Linux](https://www.macworld.com/article/221277/command-line-navigating-files-folders-mac-terminal.html) 
 (Linux uses the same command for navigating folders).
 
-3. Enter the following command: `java -jar soconnect.jar`. The SoConnect window should open.
+3. Enter the following command into the terminal: `java -jar soconnect.jar`. The SoConnect window should open.
 
 <div markdown="block" class="alert alert-primary">:bulb: **Tip:**
 
