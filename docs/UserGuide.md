@@ -866,6 +866,7 @@ You realise Alex your interviewer at google will no longer be interviewing you, 
 Unlinks the specified event and the specified contact(s).
 
 **Examples:**
+
 Input | Expected Output
 --------|------------------
 `eunlink 2 c/1` | Unlinks the first event in the **currently displayed** event list from the first contact in the **currently displayed** contact list. Yous should see this message in the message box: `Successfully unlinked the event Google Interview from the contact Alex Yeoh` ![UnlinkBefore](images/demo-screenshots/eunlinkBefore.png) ![UnlinkAfter](images/demo-screenshots/eunlinkAfter.png)
