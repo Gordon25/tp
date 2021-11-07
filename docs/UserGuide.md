@@ -339,6 +339,7 @@ This section details all the features and commands you can use to tell SoConnect
 * [Clearing all contacts](#clearing-all-contacts-cclear)
 
 
+
 ### Adding a contact: `cadd`
 
 You have just started learning a new module, is there a way to add the Professor and your TA's to SoConnect? Use `cadd`!
@@ -357,6 +358,7 @@ Input | Expected Output
 `cadd n/ Jon Cheng t/TA e/e7654321@u.nus.edu a/COM1-0201 p/87654321 t/Senior th/jonnyjohnny z/https://nus-sg.zoom.us/j/0123456789?pwd=ABCDEFGHIJKLMNOPDJFHISDFSDH` | You should see this message in the message box: `New contact added: Jon Cheng; Email: e7654321@u.nus.edu; Phone: 87654321; Address: COM1-0201; Zoom Link: https://nus-sg.zoom.us/j/0123456789?pwd=ABCDEFGHIJKLMNOPDJFHISDFSDH; Telegram: jonnyjohnny; Tags: [Senior][TA]`<br><br> You should also see `Jon Cheng` **at the end** of your contact list: ![New Contact 2](images/demo-screenshots/caddEx2.png) 
 
 *Index of the newly added contact will be one more than your previous number of contacts.
+
 
 
 ### Deleting a contact: `cdelete`
@@ -380,14 +382,11 @@ Is there a way to delete a specified contact(s) from SoConnect? Use `cdelete`!
 
 Input | Expected Output
 --------|------------------
-[`clist`](#listing-all-contacts-clist) followed by `cdelete 2` | Deletes the second contact from SoConnect. <br><br> You should see these messages in the message box: <br> 1. After `clist`: `Listed all contacts` <br> 2. After `cdelete 2`: `Deleted Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]`
-![Delete Contact 2](images/demo-screenshots/cdeleteEx1.png) 
+[`clist`](#listing-all-contacts-clist) followed by `cdelete 2` | Deletes the second contact from SoConnect. <br><br> You should see these messages in the message box: <br> 1. After `clist`: `Listed all contacts` <br> 2. After `cdelete 2`: `Deleted Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]` ![Delete Contact 2](images/demo-screenshots/cdeleteEx1.png) 
+[`cfind Bernice`](#finding-contacts-cfind) followed by `cdelete 1` | Deletes the first contact from the **results of the `cfind` command**. <br><br> You should see these messages in the message box: <br> 1. After `cfind Bernice`: `1 contacts listed!` <br> 2. After `cdelete 1`: `Deleted Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]` ![Delete Contact 2](images/demo-screenshots/cdeleteEx2.png) 
+[`cdelete 3-5`](#deleting-a-contact-cdelete) | Deletes contacts from index 3 to 5 from the **currently displayed** contact list. <br><br> You should see these messages in the message box:<br>`Deleted Contact: Charlotte Oliveiro; Email: charlotte@example.com` <br> `Deleted Contact: David Li; Email: lidavid@comp.nus.edu.sg; Address: COM1-B1-0931; Telegram: lidavid; Tags: [professor][CS2103T]` <br> `Deleted Contact: Irfan Ibrahim; Email: irfan@example.com; Address: Blk 47 Tampines Street 20, #17-35; Telegram: irfanx; Tags: [classmates]` ![Delete Contacts 3 to 5](images/demo-screenshots/cdeleteEx3.png) 
 
-[`cfind Bernice`](#finding-contacts-cfind) followed by `cdelete 1` | Deletes the first contact from the **results of the `cfind` command**. <br><br> You should see these messages in the message box: <br> 1. After `cfind Bernice`: `1 contacts listed!` <br> 2. After `cdelete 1`: `Deleted Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]`
-![Delete Contact 2](images/demo-screenshots/cdeleteEx2.png) 
 
-[`cdelete 3-5`](#deleting-a-contact-cdelete) | Deletes contacts from index 3 to 5 from the **currently displayed** contact list. <br><br> You should see these messages in the message box:<br>`Deleted Contact: Charlotte Oliveiro; Email: charlotte@example.com` <br> `Deleted Contact: David Li; Email: lidavid@comp.nus.edu.sg; Address: COM1-B1-0931; Telegram: lidavid; Tags: [professor][CS2103T]` <br> `Deleted Contact: Irfan Ibrahim; Email: irfan@example.com; Address: Blk 47 Tampines Street 20, #17-35; Telegram: irfanx; Tags: [classmates]`
-![Delete Contacts 3 to 5](images/demo-screenshots/cdeleteEx3.png) 
 
 ### Editing a contact: `cedit`
 
@@ -414,8 +413,8 @@ Oh no! You accidentally entered the first contact name wrongly? How can you edit
 Input | Expected Output
 --------|------------------
 `cedit 2 p/91234567 e/agentX@thehightable.com dt/TA dt` | Edits the **phone number** and **email address** of the second contact of **currently displayed** contact list to be `91234567` and `agentX@thehightable.com` respectively. <br> <br>You should see this message in the message box:<br> `Edited Contact: Bernice Yu; Email: agentX@thehightable.com; Phone: 91234567; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]` <br><br> You should also see these changes: ![Edit Contact 1](images/demo-screenshots/ceditEx1.png)
-
 `cedit 1 n/Aiken Dueet dt/*` | Edits the **name** of the first contact of **currently displayed** contact list to be `Aiken Dueet` and **clears all existing tags**. <br><br>You should see this message in your message box: `Edited Contact: Aiken Dueet; Email: alexyeoh@example.com; Phone: 87438807; Address: Blk 30 Geylang Street 29, #06-40; Telegram: yeoh_alex` <br><br> You should also see these changes: ![Edit Contact 2](images/demo-screenshots/ceditEx2.png)
+
 
 
 ### Finding contacts: `cfind`
@@ -457,6 +456,7 @@ Input | Expected Output
 `cfind p/926 441 e/nus.edu` | Returns contacts with phone numbers that contain `926` and with emails that contain `nus.edu`.<br><br>You should see this message in the message box:<br>`2 contacts listed!`<br><br> You should also see only these **2 contacts**: ![Find Contact 2](images/demo-screenshots/cfindEx2.png)
 
 
+
 ### Listing all contacts: `clist`
 
 You want to look through the phone numbers of all your contacts. Use `clist`! 
@@ -482,6 +482,8 @@ Input | Expected Output
 `clist` | Shows **all contacts** in SoConnect with **all available details** for each contact. <br><br> You should see this message in the message box:<br> `Listed all contacts`
 `clist e/ p/` | Shows **all contacts** in SoConnect with **only their names, email addresses and phone numbers** (if available). <br><br> You should see this message in the message box:<br> `Listed all contacts` <br><br> You should also see the contacts list displays **only the specified _fields_**: ![List Contact 1](images/demo-screenshots/clistEx.png)
 
+
+
 ### Bookmarking a contact: `cmark`
 
 You have weekly meetings with your CS2103T group mates Irfan and David, you want to pin their contact so that you can contact them for meetings more easily. Use `cmark`! 
@@ -502,11 +504,12 @@ You have weekly meetings with your CS2103T group mates Irfan and David, you want
 Input | Expected Output
 --------|------------------
 `cmark 2` | Bookmarks the second contact of the **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Marked Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]` <br><br> You should see `Bernice Yu` **pinned to the top** of your contact list with the **Bookmark Icon** ![Mark Contact](images/demo-screenshots/cmarkEx1.png) 
-
 `cmark 4 5` | Bookmarks the fourth and fifth contact of the **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Marked contact: Irfan Ibrahim; Email: irfan@example.com; Address: Blk 47 Tampines Street 20, #17-35; Telegram: irfanx; Tags: [classmates]
 Marked contact: David Li; Email: lidavid@comp.nus.edu.sg; Address: COM1-B1-0931; Telegram: lidavid; Tags: [professor][CS2103T]` <br><br> You should see `Irfan Ibrahim` and `David Li` **pinned, in this order, to the top** of your contact list with the **Bookmark Icon** ![Mark Contact](images/demo-screenshots/cmarkEx2.png) 
 
 _See also: [Removing bookmark of a contact](#removing-bookmark-of-a-contact-cunmark)_
+
+
 
 ### Removing bookmark of a contact: `cunmark`
 
@@ -530,11 +533,12 @@ e.g. `cunmark 2 3`, the third event will be placed above the second.
 Input | Expected Output
 --------|------------------
 `cunmark 2` | Removes bookmark of the second contact of **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Unmarked Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bernicee; Tags: [TA][friends]` <br><br> You should see the contact card of `Bernice Yu` without the **Bookmark Icon** and replaced **after all unmarked contacts** ![Unmark Contact](images/demo-screenshots/cunmarkEx1.png)
-
 `cunmark 1 2` | Removes bookmark of the first and second contact of **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Unmarked contact: David Li; Email: lidavid@comp.nus.edu.sg; Address: COM1-B1-0931; Telegram: lidavid; Tags: [professor][CS2103T]
 Unmarked contact: Irfan Ibrahim; Email: irfan@example.com; Address: Blk 47 Tampines Street 20, #17-35; Telegram: irfanx; Tags: [classmates]` <br><br> You should see the contact cards of `David Li` and `Irfan Ibrahim` without the **Bookmark Icon** and replaced **after all unmarked contacts** ![Unmark Contact](images/demo-screenshots/cunmarkEx2.png) 
  
 _See also: [Bookmarking a contact](#bookmarking-a-contact-cmark)_
+
+
 
 ### Viewing a contact: `cview`
 
@@ -557,6 +561,8 @@ Input | Expected Output
 --------|------------------
 `cview 2` | Shows all details of the second contact of **currently displayed** in SoConnect **fully**. <br> You should see this message in the message box:<br> `Viewing Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]` <br><br> You should see this change of your **viewed** contact: ![View Contact](images/demo-screenshots/cviewEx.png)
 
+
+
 ### Clearing all contacts: `cclear`
 
 You have a bunch of outdated contacts and you want to delete them all at once, howdo you do that? Use `cclear`! 
@@ -566,6 +572,10 @@ You have a bunch of outdated contacts and you want to delete them all at once, h
 <div markdown="span" class="alert alert-info">:information_source: **Note:**
 This will not change the events saved in SoConnect. 
 </div>
+
+
+
+
 
 ## Event Management
 
@@ -707,6 +717,7 @@ Input | Expected Output
 `efind t/CS2103T Intern` | Returns events with tags that contain `CS2103T` and `Intern`.<br><br> You should see this message in the message box:<br> `2 events listed!` <br><br> You should also see only these **2 events**: ![Find Event 2](images/demo-screenshots/efindEx2.png)
 
 
+
 ### Listing all events: `elist`
 
 Now, how do you get SoConnect to display only the names of events currently in SoConnect? Use `elist`! 
@@ -732,6 +743,8 @@ Input | Expected Output
 `elist` | Shows **all events** in SoConnect with **all available details** for each event. <br><br> You should see this message in the message box: <br>`Listed all events`
 `elist d/ at/` | Shows **all events** in SoConnect with **only their names, start date and time and description** (if available). You should see this message in the message box: <br>`Listed all events` <br><br> You should also see the event list displays **only the specified _fields_**: ![List Events](images/demo-screenshots/elistEx.png)
 
+
+
 ### Bookmarking an event: `emark`
 
 You want a way to bookmark your weekly CS2103T project meeting, how do you tell SoConnect to do that for you? Use `emark`!  
@@ -751,10 +764,10 @@ You want a way to bookmark your weekly CS2103T project meeting, how do you tell 
 Input | Expected Output
 --------|------------------
 `emark 2` | Bookmarks the second event of the **currently displayed** event list in SoConnect. <br><br> You should see this message in the message box:<br> `Marked event: Dance class; Start: 13-11-2021 20:00; End: 13-11-2021 22:00; Description: Dancing is my passion. I like pole dancing.; Address: NUS UTown; Tags: [CCA][Recurring]` <br><br> You should see `Dance class` **pinned to the top** of your event list with the **Bookmark Icon** ![Mark Event](images/demo-screenshots/emarkEx1.png) 
-
 `emark 4 5` | Bookmarks the fourth and fifth event of the **currently displayed** event list in SoConnect. <br><br> You should see this message in the message box:<br> `Marked event: Dance class; Start: 13-11-2021 20:00; End: 13-11-2021 22:00; Description: Dancing is my passion. I like pole dancing.; Address: NUS UTown; Tags: [CCA][Recurring] Marked event: BasketBall training; Start: 11-11-2021 18:00; End: 11-11-2021 20:00; Description: Learning to dunk like LeBron James; Address: USC; Tags: [CCA][recurring]` <br><br> You should see `Dance class` and `Basketball training` **pinned, in this order, to the top** of your event list with the **Bookmark Icon** ![Mark Event](images/demo-screenshots/emarkEx2.png) 
 
 _See Also: [Removing bookmark of an event](#removing-bookmark-of-an-event-eunmark)_
+
 
 
 ### Removing bookmark of an event: `eunmark`
@@ -779,10 +792,11 @@ With assignment deadlines approaching, you realise you are too busy to attend Da
 Input | Expected Output
 --------|------------------
 `eunmark 2` | Removes bookmark of the second event of **currently displayed** event list in SoConnect. <br><br> You should see this message in the message box:<br> `Unmarked event: CS2103T project meeting; Start: 10-10-2021 21:00; End: 10-10-2021 22:00; Zoom Link: nus-sg.zoom.us/j21342513543; Tags: [Recurring][CS2103T]` <br><br> You should see the event card of `CS2103T project meeting` without the **Bookmark Icon** and replaced **after all unmarked events** ![Unmark Event](images/demo-screenshots/eunmarkEx1.png)
-
 `eunmark 4 3` | Removes bookmark of the fourth and third event of **currently displayed** event list in SoConnect. <br><br> You should see this message in the message box:<br> `Unmarked event: BasketBall training; Start: 11-11-2021 18:00; End: 11-11-2021 20:00; Description: Learning to dunk like LeBron James; Address: USC; Tags: [CCA][recurring] Unmarked event: Dance class; Start: 13-11-2021 20:00; End: 13-11-2021 22:00; Description: Dancing is my passion. I like pole dancing.; Address: NUS UTown; Tags: [CCA][Recurring]` <br><br> You should see the event cards of `Dance class` and `Basketball training` without the **Bookmark Icon** and replaced **after all unmarked events** ![Unmark Event](images/demo-screenshots/eunmarkEx2.png) 
 
 _See Also: [Bookmarking an event](#bookmarking-an-event-emark)_
+
+
 
 ### Clearing all events: `eclear`
 
@@ -793,6 +807,8 @@ You have a bunch of outdated events and you want to delete them all at once, how
 <div markdown="span" class="alert alert-info">:information_source: **Note:**
 This will not change the contacts saved in SoConnect. 
 </div>
+
+
 
 ### Viewing an event: `eview`
 
@@ -814,6 +830,7 @@ You are reporting for your first basketball training, you want to see the traini
 Input | Expected Output
 --------|------------------
 `eview 1` | Shows all details of the first event in the **currently displayed** event list **fully**. <br><br> _The expected display is similar to [Viewing a contact](#viewing-a-contact-cview)_
+
 
 
 ### Linking an event to contacts: `elink`
@@ -839,6 +856,7 @@ Input | Expected Output
 _See Also: [Unlinking an event from contacts](#unlinking-an-event-from-contacts-eunlink)_
 
 
+
 ### Unlinking an event from contacts: `eunlink`
 
 You realise Alex your interviewer at google will no longer be interviewing you, there a way to unlink his contact to the google interview event? Use `eunlink`! 
@@ -850,10 +868,10 @@ Unlinks the specified event and the specified contact(s).
 **Examples:**
 Input | Expected Output
 --------|------------------
-`eunlink 2 c/1` | Unlinks the first event in the **currently displayed** event list from the first contact in the **currently displayed** contact list. Yous should see this message in the message box: `Successfully unlinked the event Google Interview from the contact Alex Yeoh` ![UnlinkBefore](images/demo-screenshots/eunlinkBefore.png)     
-![UnlinkAfter](images/demo-screenshots/eunlinkAfter.png)
+`eunlink 2 c/1` | Unlinks the first event in the **currently displayed** event list from the first contact in the **currently displayed** contact list. Yous should see this message in the message box: `Successfully unlinked the event Google Interview from the contact Alex Yeoh` ![UnlinkBefore](images/demo-screenshots/eunlinkBefore.png) ![UnlinkAfter](images/demo-screenshots/eunlinkAfter.png)
 
 _See Also: [Linking an event to contacts](#linking-an-event-to-contacts-elink)_
+
 
 
 ### Sorting events: `esort`
@@ -871,6 +889,8 @@ Events that have ended **will not be shown** after you execute `esort`
 </div>
 
 
+
+
 ## General
 
 This section details all other the features and commands available in SoConnect that can enhance your SoConnect experience:
@@ -885,6 +905,7 @@ This section details all other the features and commands available in SoConnect 
 * [Calendar Window](#calendar-window-calendar)
 
 
+
 ### Help Window: `help`
 
 Forgot how a certain command should be typed? Use `help`!
@@ -897,6 +918,8 @@ Forgot how a certain command should be typed? Use `help`!
 
 Alternatively, you can view the help window using the top menu bar via `Help -> Help` or press `F1`.
 </div>
+
+
 
 ### Exiting SoConnect: `exit`
 
@@ -926,6 +949,7 @@ Input | Expected Output
 _See Also: [Redo a command](#redo-a-command-redo)_
 
 
+
 ### Redo a command: `redo`
 
 Accidentally undid an command? Don't worry, use `redo`!
@@ -939,6 +963,8 @@ Input | Expected Output
 [`edelete 1`](#deleting-an-event-edelete) followed by [`undo`](#undo-a-command-undo) then `redo` | First **restores the deleted event** in the event list. <br>Then `redo` will **delete the same event again**.
 
 _See Also: [Undo a command](#undo-a-command-undo)_
+
+
 
 ### Calendar Window: `calendar`
 
