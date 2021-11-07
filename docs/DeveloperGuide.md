@@ -151,6 +151,127 @@ Classes used by multiple components are in the `seedu.addressbook.commons` packa
 
 This section describes some noteworthy details on how certain features are implemented.
 
+## Mark Contacts feature
+
+This section details how the `cmark` command is implemented. This command allows the user to mark freuquently used contacts, with the added feature of allowing the user to specify **more than one** contacts to mark. The marked contacts will appear at the **top** of the contact list and in **reverse order** in which their corresponding indexes are specified.
+
+#### Implementation
+
+Both `CMarkCommandParser` and `CMarkCommand` classes are involved in the execution of the `cmark` command.
+
+The `parse` method inside the `CMarkCommandParser` receives the user input, extracts the required index(es). It then creates a new List of `Index`(es) objects that will encapsulate the indexes of the contacts to be marked.
+
+<div markdown="span" class="alert alert-primary">
+:bulb: **Tip:** If the argument is empty or contains invalid values, `CMarkCommandParser#parse` throws a ParseException.
+</div>
+
+`CMarkCommandParser#parse` method will then return an `CMarkCommand` with the given List of `Index` object.
+
+Given below is one example usage scenario and explains how the `cmark` feature behaves at each step. You may also refer to the sequence diagram below.
+
+Step 1. The user enters `cmark 1 2` to mark the first and second contact displayed in the contact list. The arguments `1 2` are passed to the `CMarkCommandParser` through the `parse` method call.
+
+Step 2. The user input `1 2` will be subjected to checks by `String#trim` to ensure that argument provided is not empty. A list of `Index` object is created from the argument using `Parserutil#parseMarkIndexes`. Examples of incorrect arguments include `` or `a @`.
+
+Step 3. A List of `Index` object is created based on the input arguments.
+   * From this example, the List of `Indexes` created will contain element two elements both of which are `Indexes` and contains the integer value `1` and `2` respectively.
+
+Step 4. A new `CMarkCommand` object is returned to the `LogicManager`.
+
+Step 5. During the execution of the command, the `CMarkCommand` object gets the `filteredContactList` in the `Model` and gets the relevant contacts using the object created in step 3. For each contact identified, the command will check if the contact is originally marked, if so it will generate a message saying the particular contact is already marked. Otherwise, a new marked `Contact` containing the same details as the original contact is created and replaces the original contact in the `Model`. Thereafter, the list of contact in the model is rearranged using `Model#rearrangeContactsInOrder`, which will cause newly marked contacts to be placed at the top of the contact list.
+
+Step 6. A `CommandResult` with all newly marked contacts is returned and will be displayed to the user.
+
+#### Sequence Diagram
+
+The following sequence diagram shows how the `elist` feature works for the example:
+
+//![EListSequenceDiagram](images/EListSequenceDiagram.png)
+
+#### Activity Diagram
+
+The following activity diagram summarizes what happens when the `cmark` feature is triggered:
+
+//![EListActivityDiagram](images/EListActivityDiagram.png)
+
+#### Design Considerations
+
+**Aspect: Marking of contacts:**
+
+* **Alternative implementation 1:** Not have command to mark contacts (current).
+    * Pros: No need to implement this command and the corresponding parser, code base is prone to bugs.
+    * Cons: User may have to scroll through or use `cfind` command to refer to contact(s) used frequently.
+* **Alternative implementation 2 (current choice):** CMarkCommand that does not place newly marked contacts at the top of the list.
+  * Pros: Easier to implement as there is no need to keep track of which contacts are marked and the order in which they are marked.
+  * Cons: While user can more easily find marked contacts than in the first alternative, they still have to scroll through the entire contact list to find the marked contact(s).
+
+
+## Unmark Contacts feature
+
+This section details how the `cunmark` command is implemented. This command allows the user to unmark marked contacts, with the added feature of allowing the user to specify **more than one** contacts to unmark. The marked contacts will appear after all marked contacts and **in order** in which their corresponding indexes are specified.
+
+#### Implementation
+
+Both `CUnmarkCommandParser` and `CUnmarkCommand` classes are involved in the execution of the `cunmark` command.
+
+The `parse` method inside the `CUnmarkCommandParser` receives the user input, extracts the required index(es). It then creates a new List of `Index`(es) objects that will encapsulate the indexes of the marked contacts to be unmarked.
+
+<div markdown="span" class="alert alert-primary">
+:bulb: **Tip:** If the argument is empty or contains invalid values, `CUnmarkCommandParser#parse` throws a ParseException.
+</div>
+
+`CUnmarkCommandParser#parse` method will then return an `CUnmarkCommand` with the given List of `Index` object.
+
+Given below is one example usage scenario and explains how the `cunmark` feature behaves at each step. You may also refer to the sequence diagram below.
+
+Step 1. The user enters `cunmark 4 5` to mark the fourth and fifth ***marked** contact displayed in the contact list. The arguments `4 5` are passed to the `CUnmarkCommandParser` through the `parse` method call.
+
+Step 2. The user input `4 5` will be subjected to checks by `String#trim` to ensure that argument provided is not empty. `Parserutil#parseMarkIndexes` is used to create the list of `Index` from the argument. Examples of incorrect arguments include `` or `a @`.
+
+Step 3. A List of `Index` object is created based on the input arguments.
+   * From this example, the List of `Indexes` created will contain element two elements both of which are `Indexes` and contains the integer value `4` and `5` respectively.
+
+Step 4. A new `CUnmarkCommand` object is returned to the `LogicManager`.
+
+Step 5. During the execution of the command, the `CUnmarkCommand` object retrives the `filteredContactList` in the `Model` and get the relevant contacts using the object created in step 3. For each contact identified, the command will check if the contact is not marked, if so a message saying the contact is not marked will be generated. Otherwise, a new unmarked `Contact` object containing the same details as the original contact is created and replaces the original contact in `Model`. Thereafter, the list of contact in the model is rearranged using `Model#rearrangeContactsInOrder`, which will cause newly unmarked contacts to be placed below all marked contacts in the contact list.
+
+Step 6. A `CommandResult` with all newly unmarked contacts is returned and will be displayed to the user.
+
+#### Sequence Diagram
+
+The following sequence diagram shows how the `elist` feature works for the example:
+
+//![EListSequenceDiagram](images/EListSequenceDiagram.png)
+
+#### Activity Diagram
+
+The following activity diagram summarizes what happens when the `cmark` feature is triggered:
+
+//![EListActivityDiagram](images/EListActivityDiagram.png)
+
+#### Design Considerations
+
+**Aspect: Marking of contacts:**
+
+* **Alternative implementation 1:** Not have command to unmark contacts (current).
+    * Pros: No need to implement this command and the corresponding parser, code base is prone to bugs.
+    * Cons: The list of marked contacts may grow and become to large for user to meaningfully use.
+* **Alternative implementation 2 (current choice):** CMarkCommand that does not replace newly unmarked contacts after all marked contacts.
+  * Pros: Easier to implement as there is no need to keep track of which the newly unmarked contacts.
+  * Cons: The marked contacts will no longer be at the top of the contact list, users would still have to scroll through the entire list of unmark and marked contacts to find a specific marked contact(s).
+
+
+**Aspect: Whether to allow users to specify more than one index:**
+
+* **Alternative implementation 1:** Only allow users to specify one `Index`.
+  * Pros: Easy to implement as the newly marked contacts is simply removed and added after all marked contacts.
+  * Cons: The user may want to unmark multiple contacts, which result in calling `cunmark` command multiple times.
+
+* **Alternative implementation 2 (current choice):** Allow users to specify one or more `Index`(es).
+  * Pros: This command is more efficient, users can now unmark more than one contacts at the same time, saving time from having to call `cunmark` repeatedly.
+  * Cons: More code will have to be written in order to facilitate unmarking multiple contacts and ensuring they are rearranged in the correct order.
+ 
+ 
 ### Delete Events feature
 This section details how an `Event` or multiple `Event` objects are deleted using the `edelete` command.
 
@@ -283,6 +404,62 @@ The following sequence diagram shows how the elink operation works:
 
 ![ELinkSequenceDiagram](images/ELinkSequenceDiagram.png)
 
+
+### Delete Events feature
+
+This section details how an `Event` or multiple `Event` objects are deleted using the `edelete` command.
+
+The `edelete` command allows users to delete a single or an inclusive range of consecutive events from the current event list shown on SoConnect. The user needs to specify either an `Index` or a `Range` of event(s) to be deleted. Such event(s) would be removed from the `EventListPanel` in the _GUI_.
+
+#### Implementation
+
+We will use an example command: `edelete 1-3`.
+
+The sequence diagram below shows how the execution of the example command flows:
+
+![Interactions Inside the Logic Component for the `edelete 1 - 3` Command](images/DeleteSequenceDiagram.png)
+
+<div markdown="span" class="alert alert-info">:information_source: **Note:** 
+
+The lifeline for `EDeleteCommandParser` should end at the destroy marker (X) but due to a limitation of PlantUML, the lifeline reaches the end of diagram.
+</div>
+
+Given below is one example usage scenario and explains how the `edelete` feature behaves at each step.
+
+Step 1: The user enters the command `edelete 1-3` to delete the events at indexes 1, 2 and 3.
+
+Step 2: The user input argument is passed to the `EDeleteCommandParser` object, which parses the input arguments and creates a `Range` object for the range .
+`Range` object will only be created if the input arguments pass the checks of `ArgumentMultimap` and `ParserUtil` methods.
+
+Step 3: This `Range` object is used to construct a new `EDeleteCommand` object. `EDeleteCommand` object is then returned to `LogicManager` to be executed.
+
+Step 4: During the execution, the `EDeleteCommand` object repeatedly deletes each event from the most updated event list through the `Model#deleteEvent` method.
+`Model#deleteEvent` method would then check if the event to be deleted is **linked to any contacts**.
+If the event **has linked** contacts, `Model#deleteEvent` would **first unlink** the event and the linked contacts through `Model#unlinkContactsFromEvent` before deleting the event.
+At the same time, a new list of `EventChanger` objects containing all the events to be deleted will be created.
+The [Calendar UI implementation](#calendar-ui-feature) will discuss the use of this list.
+
+<div markdown="span" class="alert alert-primary">:bulb: **Tip:** 
+
+If the user only specifies one `Index` for `edelete`, a `Range` object is created with the same start and end `Index`.
+</div>
+
+The activity diagram below shows how the execution of the `edelete` command flows:
+
+![EDeleteActivityDiagram](images/EDeleteActivityDiagram.png)
+
+#### Design considerations
+
+**Aspect: Type of user inputs:**
+
+* **Alternative 1 (current choice):** Either a single Index or a Range can be specified.
+  * Pros: Easy to implement.
+  * Cons: Unable to delete multiple ranges of events or events that are not ordered consecutively in the event list.
+
+* **Alternative 2:** Allow a mixture of multiple single indexes and multiple ranges
+  * Pros: Able to delete events more efficiently.
+  * Cons: We must ensure that the order of delete of the events is correct. It is more complex to keep track of the events to be deleted.
+
 ### Undo/redo feature
 
 The undo/redo mechanism is facilitated by `VersionedAddressBook`. It extends `AddressBook` with an undo/redo history, stored internally as an `addressBookStateList` and `currentStatePointer`. Additionally, it implements the following operations:
@@ -403,6 +580,7 @@ Upon the execution of any command, the list of event changers is returned in the
     * Cons: Performance can be slowed down if there are many events, even if the user does not make any large change to the events.
 
 This alternative implementation will cause the `MainWindow` class to constantly query the event list in the `AddressBook` through the `Logic` manager every time a command is executed. The queried list is then used to create a new `Calendar` which will be used by the `CalendarWindow` object to display the calendar to the user. However, the performance cost is not feasible if there are many events stored in the `AddressBook`.
+
 
 --------------------------------------------------------------------------------------------------------------------
 
