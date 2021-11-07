@@ -325,14 +325,15 @@ For each feature, you will find:
 
 This section details all the features and commands you can use to tell SoConnect how to manage your contacts:
 
-**Basic** features include `cadd`, `cdelete`, `cedit` and `cfind`. 
-**Advanced** features include `clist`, `cmark`, `cunmark`, `cview` and `cclear`. 
 
+**Basic** features:
 * [Adding a contact](#adding-a-contact-cadd)
 * [Deleting a contact](#deleting-a-contact-cdelete)
 * [Editing a contact](#editing-a-contact-cedit)
 * [Finding contacts](#finding-contacts-cfind)
 * [Listing all contacts](#listing-all-contacts-clist)
+
+**Advanced** features: 
 * [Bookmarking a contact](#bookmarking-a-contact-cmark)
 * [Removing bookmark of a contact](#removing-bookmark-of-a-contact-cunmark)
 * [Viewing a contact](#viewing-a-contact-cview)
@@ -414,7 +415,6 @@ Oh no! You accidentally entered the first contact name wrongly? How can you edit
 Input | Expected Output
 --------|------------------
 `cedit 2 p/91234567 e/agentX@thehightable.com dt/TA dt` | Edits the **phone number** and **email address** of the second contact of **currently displayed** contact list to be `91234567` and `agentX@thehightable.com` respectively. <br> <br>You should see this message in the message box:<br> `Edited Contact: Bernice Yu; Email: agentX@thehightable.com; Phone: 91234567; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]` <br><br> You should also see these changes: ![Edit Contact 1](images/demo-screenshots/ceditEx1.png)
-
 `cedit 1 n/Aiken Dueet dt/*` | Edits the **name** of the first contact of **currently displayed** contact list to be `Aiken Dueet` and **clears all existing tags**. <br><br>You should see this message in your message box: `Edited Contact: Aiken Dueet; Email: alexyeoh@example.com; Phone: 87438807; Address: Blk 30 Geylang Street 29, #06-40; Telegram: yeoh_alex` <br><br> You should also see these changes: ![Edit Contact 2](images/demo-screenshots/ceditEx2.png)
 
 
@@ -566,17 +566,17 @@ This will not change the events saved in SoConnect.
 
 ## Event Management
 
-This section details all the features and commands you can use to tell SoConnect how to manage your events:
+This section details all the features and commands you can use to tell SoConnect how to manage your events: 
 
-**Basic** features include `eadd`, `edelete`, `eedit` and `efind`. 
-**Advanced** features include `elist`, `emark`, `eunmark`, `eview`, `eclear`, `elink`, `eunlink` and `esort`. 
-
+**Basic** features:
 * [Adding an event](#adding-an-event-eadd)
 * [Clearing all event](#clearing-all-events-eclear)
 * [Deleting an event](#deleting-an-event-edelete)
 * [Editing an event](#editing-an-event-eedit)
 * [Finding events](#finding-events-efind)
 * [Listing all events](#listing-all-events-elist)
+
+**Advanced** features:
 * [Bookmarking an event](#bookmarking-an-event-emark)
 * [Removing bookmark of an event](#removing-bookmark-of-an-event-eunmark)
 * [Viewing an event](#viewing-an-event-eview)
@@ -1095,7 +1095,7 @@ Action | Format, Examples
 **[Bookmark](#bookmarking-a-contact-cmark)** | `cmark INDEX [INDEX]...`<br> e.g. `cmark 1 2`
 **[Clear](#clearing-all-contacts-cclear)** | `cclear`
 **[Delete](#deleting-a-contact-cdelete)** | `cdelete INDEX1[-INDEX2]`<br> e.g. `cdelete 3` <br> e.g. `cdelete 1-5`
-**[Edit](#editing-a-contact-cedit)** | `cedit INDEX [n/NAME] [e/EMAIL] [p/PHONE] [a/ADDRESS] [th/TELEGRAM_HANDLE] [z/ZOOM] [dt/TAG_DELETED]…​ [t/TAG_ADDED]…​​`<br> e.g.`cedit 2 n/James Lee e/jameslee@u.nus.edu p/91234567 dt/OP1_projectmate t/CS2103T_projectmate t/roommate` <br> e.g. `cedit 3 dt/*`
+**[Edit](#editing-a-contact-cedit)** | `cedit INDEX [n/NAME] [e/EMAIL] [p/PHONE] [a/ADDRESS] [th/TELEGRAM_HANDLE] [z/ZOOM] [dt/TAG_DELETED]…​ [t/TAG_ADDED]…​​`<br> e.g.`cedit 2 n/James Lee e/jameslee@u.nus.edu p/91234567 dt/OP1Projectmate t/CS2103TProjectmate t/roommate` <br> e.g. `cedit 3 dt/*`
 **[Find](#finding-contacts-cfind)** | `cfind [KEYWORD]… [e/KEYWORD…] [p/KEYWORD…] [a/KEYWORD…] [th/KEYWORD…] [z/KEYWORD…] [t/KEYWORD…]`<br> e.g. `cfind James Jake p/12345678`
 **[List](#listing-all-contacts-clist)** | `clist [e/] [p/] [a/] [th/] [z/] [t/]` <br> e.g. `clist` <br> e.g. `clist e/ p/`
 **[Remove Bookmark](#removing-bookmark-of-a-contact-cunmark)** | `cunmark INDEX [INDEX]...`<br> e.g. `cunmark 4 5`
