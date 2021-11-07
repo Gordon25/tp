@@ -500,9 +500,8 @@ You have weekly meetings with your CS2103T group mates Irfan and David, you want
 **Examples:**
 
 Input | Expected Output
---------|------------------
-`cmark 2` | Bookmarks the second contact of the **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Marked Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]` <br><br> You should see `Bernice Yu` **pinned to the top** of your contact list with the **Bookmark Icon** ![Mark Contact](images/demo-screenshots/cmarkEx1.png) 
-
+----------|------------------
+`cmark 2` | Bookmarks the second contact of the **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Marked Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]` <br><br> You should see `Bernice Yu` **pinned to the top** of your contact list with the **Bookmark Icon** ![Mark Contact](images/demo-screenshots/cmarkEx1.png)
 `cmark 4 5` | Bookmarks the fourth and fifth contact of the **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Marked contact: Irfan Ibrahim; Email: irfan@example.com; Address: Blk 47 Tampines Street 20, #17-35; Telegram: irfanx; Tags: [classmates]
 Marked contact: David Li; Email: lidavid@comp.nus.edu.sg; Address: COM1-B1-0931; Telegram: lidavid; Tags: [professor][CS2103T]` <br><br> You should see `Irfan Ibrahim` and `David Li` **pinned, in this order, to the top** of your contact list with the **Bookmark Icon** ![Mark Contact](images/demo-screenshots/cmarkEx2.png) 
 
@@ -528,11 +527,9 @@ e.g. `cunmark 2 3`, the third event will be placed above the second.
 **Examples:**
 
 Input | Expected Output
---------|------------------
+------------|------------------
 `cunmark 2` | Removes bookmark of the second contact of **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Unmarked Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bernicee; Tags: [TA][friends]` <br><br> You should see the contact card of `Bernice Yu` without the **Bookmark Icon** and replaced **after all unmarked contacts** ![Unmark Contact](images/demo-screenshots/cunmarkEx1.png)
-
-`cunmark 1 2` | Removes bookmark of the first and second contact of **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Unmarked contact: David Li; Email: lidavid@comp.nus.edu.sg; Address: COM1-B1-0931; Telegram: lidavid; Tags: [professor][CS2103T]
-Unmarked contact: Irfan Ibrahim; Email: irfan@example.com; Address: Blk 47 Tampines Street 20, #17-35; Telegram: irfanx; Tags: [classmates]` <br><br> You should see the contact cards of `David Li` and `Irfan Ibrahim` without the **Bookmark Icon** and replaced **after all unmarked contacts** ![Unmark Contact](images/demo-screenshots/cunmarkEx2.png) 
+`cunmark 1 2` | Removes bookmark of the first and second contact of **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Unmarked contact: David Li; Email: lidavid@comp.nus.edu.sg; Address: COM1-B1-0931; Telegram: lidavid; Tags: [professor][CS2103T] Unmarked contact: Irfan Ibrahim; Email: irfan@example.com; Address: Blk 47 Tampines Street 20, #17-35; Telegram: irfanx; Tags: [classmates]` <br><br> You should see the contact cards of `David Li` and `Irfan Ibrahim` without the **Bookmark Icon** and replaced **after all unmarked contacts** ![Unmark Contact](images/demo-screenshots/cunmarkEx2.png) 
  
 _See also: [Bookmarking a contact](#bookmarking-a-contact-cmark)_
 
@@ -751,7 +748,6 @@ You want a way to bookmark your weekly CS2103T project meeting, how do you tell 
 Input | Expected Output
 --------|------------------
 `emark 2` | Bookmarks the second event of the **currently displayed** event list in SoConnect. <br><br> You should see this message in the message box:<br> `Marked event: Dance class; Start: 13-11-2021 20:00; End: 13-11-2021 22:00; Description: Dancing is my passion. I like pole dancing.; Address: NUS UTown; Tags: [CCA][Recurring]` <br><br> You should see `Dance class` **pinned to the top** of your event list with the **Bookmark Icon** ![Mark Event](images/demo-screenshots/emarkEx1.png) 
-
 `emark 4 5` | Bookmarks the fourth and fifth event of the **currently displayed** event list in SoConnect. <br><br> You should see this message in the message box:<br> `Marked event: Dance class; Start: 13-11-2021 20:00; End: 13-11-2021 22:00; Description: Dancing is my passion. I like pole dancing.; Address: NUS UTown; Tags: [CCA][Recurring] Marked event: BasketBall training; Start: 11-11-2021 18:00; End: 11-11-2021 20:00; Description: Learning to dunk like LeBron James; Address: USC; Tags: [CCA][recurring]` <br><br> You should see `Dance class` and `Basketball training` **pinned, in this order, to the top** of your event list with the **Bookmark Icon** ![Mark Event](images/demo-screenshots/emarkEx2.png) 
 
 _See Also: [Removing bookmark of an event](#removing-bookmark-of-an-event-eunmark)_
@@ -779,7 +775,6 @@ With assignment deadlines approaching, you realise you are too busy to attend Da
 Input | Expected Output
 --------|------------------
 `eunmark 2` | Removes bookmark of the second event of **currently displayed** event list in SoConnect. <br><br> You should see this message in the message box:<br> `Unmarked event: CS2103T project meeting; Start: 10-10-2021 21:00; End: 10-10-2021 22:00; Zoom Link: nus-sg.zoom.us/j21342513543; Tags: [Recurring][CS2103T]` <br><br> You should see the event card of `CS2103T project meeting` without the **Bookmark Icon** and replaced **after all unmarked events** ![Unmark Event](images/demo-screenshots/eunmarkEx1.png)
-
 `eunmark 4 3` | Removes bookmark of the fourth and third event of **currently displayed** event list in SoConnect. <br><br> You should see this message in the message box:<br> `Unmarked event: BasketBall training; Start: 11-11-2021 18:00; End: 11-11-2021 20:00; Description: Learning to dunk like LeBron James; Address: USC; Tags: [CCA][recurring] Unmarked event: Dance class; Start: 13-11-2021 20:00; End: 13-11-2021 22:00; Description: Dancing is my passion. I like pole dancing.; Address: NUS UTown; Tags: [CCA][Recurring]` <br><br> You should see the event cards of `Dance class` and `Basketball training` without the **Bookmark Icon** and replaced **after all unmarked events** ![Unmark Event](images/demo-screenshots/eunmarkEx2.png) 
 
 _See Also: [Bookmarking an event](#bookmarking-an-event-emark)_
@@ -849,9 +844,8 @@ Unlinks the specified event and the specified contact(s).
 
 **Examples:**
 Input | Expected Output
---------|------------------
-`eunlink 2 c/1` | Unlinks the first event in the **currently displayed** event list from the first contact in the **currently displayed** contact list. Yous should see this message in the message box: `Successfully unlinked the event Google Interview from the contact Alex Yeoh` ![UnlinkBefore](images/demo-screenshots/eunlinkBefore.png)     
-![UnlinkAfter](images/demo-screenshots/eunlinkAfter.png)
+----------------|------------------
+`eunlink 2 c/1` | Unlinks the first event in the **currently displayed** event list from the first contact in the **currently displayed** contact list. Yous should see this message in the message box: `Successfully unlinked the event Google Interview from the contact Alex Yeoh` ![UnlinkBefore](images/demo-screenshots/eunlinkBefore.png) ![UnlinkAfter](images/demo-screenshots/eunlinkAfter.png)
 
 _See Also: [Linking an event to contacts](#linking-an-event-to-contacts-elink)_
 
