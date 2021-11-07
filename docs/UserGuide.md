@@ -502,8 +502,8 @@ You have weekly meetings with your CS2103T group mates Irfan and David, you want
 **Examples:**
 
 Input | Expected Output
---------|------------------
-`cmark 2` | Bookmarks the second contact of the **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Marked Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]` <br><br> You should see `Bernice Yu` **pinned to the top** of your contact list with the **Bookmark Icon** ![Mark Contact](images/demo-screenshots/cmarkEx1.png) 
+----------|------------------
+`cmark 2` | Bookmarks the second contact of the **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Marked Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bbernicee; Tags: [TA][friends]` <br><br> You should see `Bernice Yu` **pinned to the top** of your contact list with the **Bookmark Icon** ![Mark Contact](images/demo-screenshots/cmarkEx1.png)
 `cmark 4 5` | Bookmarks the fourth and fifth contact of the **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Marked contact: Irfan Ibrahim; Email: irfan@example.com; Address: Blk 47 Tampines Street 20, #17-35; Telegram: irfanx; Tags: [classmates]
 Marked contact: David Li; Email: lidavid@comp.nus.edu.sg; Address: COM1-B1-0931; Telegram: lidavid; Tags: [professor][CS2103T]` <br><br> You should see `Irfan Ibrahim` and `David Li` **pinned, in this order, to the top** of your contact list with the **Bookmark Icon** ![Mark Contact](images/demo-screenshots/cmarkEx2.png) 
 
@@ -531,10 +531,9 @@ e.g. `cunmark 2 3`, the third event will be placed above the second.
 **Examples:**
 
 Input | Expected Output
---------|------------------
+------------|------------------
 `cunmark 2` | Removes bookmark of the second contact of **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Unmarked Contact: Bernice Yu; Email: berniceyu@example.com; Phone: 99272758; Address: Blk 30 Lorong 3 Serangoon Gardens, #07-18; Zoom Link: nus-sg.zoom.us/j/08382435376?pwd=Oow3u9N098nh8nsdLp0; Telegram: bernicee; Tags: [TA][friends]` <br><br> You should see the contact card of `Bernice Yu` without the **Bookmark Icon** and replaced **after all unmarked contacts** ![Unmark Contact](images/demo-screenshots/cunmarkEx1.png)
-`cunmark 1 2` | Removes bookmark of the first and second contact of **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Unmarked contact: David Li; Email: lidavid@comp.nus.edu.sg; Address: COM1-B1-0931; Telegram: lidavid; Tags: [professor][CS2103T]
-Unmarked contact: Irfan Ibrahim; Email: irfan@example.com; Address: Blk 47 Tampines Street 20, #17-35; Telegram: irfanx; Tags: [classmates]` <br><br> You should see the contact cards of `David Li` and `Irfan Ibrahim` without the **Bookmark Icon** and replaced **after all unmarked contacts** ![Unmark Contact](images/demo-screenshots/cunmarkEx2.png) 
+`cunmark 1 2` | Removes bookmark of the first and second contact of **currently displayed** contact list in SoConnect. <br><br> You should see this message in the message box:<br> `Unmarked contact: David Li; Email: lidavid@comp.nus.edu.sg; Address: COM1-B1-0931; Telegram: lidavid; Tags: [professor][CS2103T] Unmarked contact: Irfan Ibrahim; Email: irfan@example.com; Address: Blk 47 Tampines Street 20, #17-35; Telegram: irfanx; Tags: [classmates]` <br><br> You should see the contact cards of `David Li` and `Irfan Ibrahim` without the **Bookmark Icon** and replaced **after all unmarked contacts** ![Unmark Contact](images/demo-screenshots/cunmarkEx2.png)
  
 _See also: [Bookmarking a contact](#bookmarking-a-contact-cmark)_
 
