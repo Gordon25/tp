@@ -325,14 +325,15 @@ For each feature, you will find:
 
 This section details all the features and commands you can use to tell SoConnect how to manage your contacts:
 
-**Basic** features include `cadd`, `cdelete`, `cedit` and `cfind`. 
-**Advanced** features include `clist`, `cmark`, `cunmark`, `cview` and `cclear`. 
 
+**Basic** features:
 * [Adding a contact](#adding-a-contact-cadd)
 * [Deleting a contact](#deleting-a-contact-cdelete)
 * [Editing a contact](#editing-a-contact-cedit)
 * [Finding contacts](#finding-contacts-cfind)
 * [Listing all contacts](#listing-all-contacts-clist)
+
+**Advanced** features: 
 * [Bookmarking a contact](#bookmarking-a-contact-cmark)
 * [Removing bookmark of a contact](#removing-bookmark-of-a-contact-cunmark)
 * [Viewing a contact](#viewing-a-contact-cview)
@@ -578,17 +579,17 @@ This will not change the events saved in SoConnect.
 
 ## Event Management
 
-This section details all the features and commands you can use to tell SoConnect how to manage your events:
+This section details all the features and commands you can use to tell SoConnect how to manage your events: 
 
-**Basic** features include `eadd`, `edelete`, `eedit` and `efind`. 
-**Advanced** features include `elist`, `emark`, `eunmark`, `eview`, `eclear`, `elink`, `eunlink` and `esort`. 
-
+**Basic** features:
 * [Adding an event](#adding-an-event-eadd)
 * [Clearing all event](#clearing-all-events-eclear)
 * [Deleting an event](#deleting-an-event-edelete)
 * [Editing an event](#editing-an-event-eedit)
 * [Finding events](#finding-events-efind)
 * [Listing all events](#listing-all-events-elist)
+
+**Advanced** features:
 * [Bookmarking an event](#bookmarking-an-event-emark)
 * [Removing bookmark of an event](#removing-bookmark-of-an-event-eunmark)
 * [Viewing an event](#viewing-an-event-eview)
@@ -1126,7 +1127,7 @@ Action | Format, Examples
 **[Bookmark](#bookmarking-a-contact-cmark)** | `cmark INDEX [INDEX]...`<br> e.g. `cmark 1 2`
 **[Clear](#clearing-all-contacts-cclear)** | `cclear`
 **[Delete](#deleting-a-contact-cdelete)** | `cdelete INDEX1[-INDEX2]`<br> e.g. `cdelete 3` <br> e.g. `cdelete 1-5`
-**[Edit](#editing-a-contact-cedit)** | `cedit INDEX [n/NAME] [e/EMAIL] [p/PHONE] [a/ADDRESS] [th/TELEGRAM_HANDLE] [z/ZOOM] [dt/TAG_DELETED]…​ [t/TAG_ADDED]…​​`<br> e.g.`cedit 2 n/James Lee e/jameslee@u.nus.edu p/91234567 dt/OP1_projectmate t/CS2103T_projectmate t/roommate` <br> e.g. `cedit 3 dt/*`
+**[Edit](#editing-a-contact-cedit)** | `cedit INDEX [n/NAME] [e/EMAIL] [p/PHONE] [a/ADDRESS] [th/TELEGRAM_HANDLE] [z/ZOOM] [dt/TAG_DELETED]…​ [t/TAG_ADDED]…​​`<br> e.g.`cedit 2 n/James Lee e/jameslee@u.nus.edu p/91234567 dt/OP1Projectmate t/CS2103TProjectmate t/roommate` <br> e.g. `cedit 3 dt/*`
 **[Find](#finding-contacts-cfind)** | `cfind [KEYWORD]… [e/KEYWORD…] [p/KEYWORD…] [a/KEYWORD…] [th/KEYWORD…] [z/KEYWORD…] [t/KEYWORD…]`<br> e.g. `cfind James Jake p/12345678`
 **[List](#listing-all-contacts-clist)** | `clist [e/] [p/] [a/] [th/] [z/] [t/]` <br> e.g. `clist` <br> e.g. `clist e/ p/`
 **[Remove Bookmark](#removing-bookmark-of-a-contact-cunmark)** | `cunmark INDEX [INDEX]...`<br> e.g. `cunmark 4 5`
