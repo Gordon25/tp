@@ -186,13 +186,13 @@ Step 6. A `CommandResult` with all newly marked contacts is returned and will be
 
 The following sequence diagram shows how the `elist` feature works for the example:
 
-//![EListSequenceDiagram](images/EListSequenceDiagram.png)
+![CMarkSequenceDiagram](images/CMarkSequenceDiagram.png)
 
 #### Activity Diagram
 
 The following activity diagram summarizes what happens when the `cmark` feature is triggered:
 
-//![EListActivityDiagram](images/EListActivityDiagram.png)
+![CMarkActivityDiagram](images/CMarkActivityDiagram.png)
 
 #### Design Considerations
 
@@ -241,13 +241,13 @@ Step 6. A `CommandResult` with all newly unmarked contacts is returned and will 
 
 The following sequence diagram shows how the `elist` feature works for the example:
 
-//![EListSequenceDiagram](images/EListSequenceDiagram.png)
+![CUnmarkSequenceDiagram](images/CUnmarkSequenceDiagram.png)
 
 #### Activity Diagram
 
 The following activity diagram summarizes what happens when the `cmark` feature is triggered:
 
-//![EListActivityDiagram](images/EListActivityDiagram.png)
+![CUnmarkActivityDiagram](images/CUnmarkActivityDiagram.png)
 
 #### Design Considerations
 
