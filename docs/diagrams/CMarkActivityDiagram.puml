@@ -4,23 +4,39 @@
 start
 :User enters cmark command in the command box;
 :CMarkCommandParser parses the command;
+<<<<<<< HEAD
 if () then (arguments are valid)
 
     :Generate list of indexes;
 
     if() then (indexes not greater than length of contact list)
+=======
+if () then ([arguments are valid])
+
+    :Generate list of indexes;
+
+    if() then ([indexes not greater than length of contact list])
+>>>>>>> a354911b8df5adc7baedc53db1896a7832976cf8
         : get contact corresponding to the index
                         in the contact list;
         : create a new marked contact;
         : replace the original contact with the marked contact;
         : rearrange contacts in order;
 
+<<<<<<< HEAD
     else (false)
+=======
+    else ([else])
+>>>>>>> a354911b8df5adc7baedc53db1896a7832976cf8
         :throw CommandException with
                 invalid contact displayed;
     endif
 
+<<<<<<< HEAD
 else (false)
+=======
+else ([else])
+>>>>>>> a354911b8df5adc7baedc53db1896a7832976cf8
 :throw ParseException with invalid command
 format message and command usage;
 endif
@@ -29,4 +45,8 @@ endif
 
 stop
 
+<<<<<<< HEAD
 @enduml
+=======
+@enduml
+>>>>>>> a354911b8df5adc7baedc53db1896a7832976cf8

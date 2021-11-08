@@ -4,6 +4,7 @@
 start
 :User enters cunmark command in the command box;
 :CUnmarkCommandParser parses the command;
+<<<<<<< HEAD
 if () then (arguments are valid)
 
     :Generate list of indexes;
@@ -16,16 +17,38 @@ if () then (arguments are valid)
             : replace the original contact with the unmarked contact;
 
             else (false)
+=======
+if () then ([arguments are valid])
+
+    :Generate list of indexes;
+
+    if() then ([indexes not greater than length of contact list])
+        : get contact corresponding to the index
+                        in the contact list;
+        if() then ([contact is marked])
+            : create a new unmarked contact;
+            : replace the original contact with the unmarked contact;
+
+            else ([else])
+>>>>>>> a354911b8df5adc7baedc53db1896a7832976cf8
             endif
 
             : rearrange contacts in order;
 
+<<<<<<< HEAD
     else (false)
+=======
+    else ([else]))
+>>>>>>> a354911b8df5adc7baedc53db1896a7832976cf8
         :throw CommandException with
                 invalid contact displayed;
     endif
 
+<<<<<<< HEAD
 else (false)
+=======
+else ([else])
+>>>>>>> a354911b8df5adc7baedc53db1896a7832976cf8
 :throw ParseException with invalid command
 format message and command usage;
 endif
@@ -34,4 +57,8 @@ endif
 
 stop
 
+<<<<<<< HEAD
 @enduml
+=======
+@enduml
+>>>>>>> a354911b8df5adc7baedc53db1896a7832976cf8

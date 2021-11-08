@@ -55,7 +55,11 @@ Model --> CMarkCommand
 deactivate Model
 
 loop 2 times
+<<<<<<< HEAD
     CMarkCommand -> Contact : unmarkContact()
+=======
+    CMarkCommand -> Contact : markContact()
+>>>>>>> a354911b8df5adc7baedc53db1896a7832976cf8
     activate Contact
 
     Contact --> CMarkCommand
@@ -87,4 +91,8 @@ deactivate CMarkCommand
 
 [<--LogicManager
 deactivate LogicManager
+<<<<<<< HEAD
 @enduml
+=======
+@enduml
+>>>>>>> a354911b8df5adc7baedc53db1896a7832976cf8
