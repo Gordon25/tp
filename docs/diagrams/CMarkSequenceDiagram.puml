@@ -55,7 +55,7 @@ Model --> CMarkCommand
 deactivate Model
 
 loop 2 times
-    CMarkCommand -> Contact : markContact()
+    CMarkCommand -> Contact : unmarkContact()
     activate Contact
 
     Contact --> CMarkCommand
